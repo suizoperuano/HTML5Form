@@ -5,3 +5,19 @@
 body {
     background-color: aqua;
 }
+.myContainer {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.notes {
+    font-size: small;
+}
+#radio-container {
+    font-size: small;
+    border-radius: 4px;
+}
+.form-check {
+    padding-top: 3px;
+    padding-left: 25px;
+}

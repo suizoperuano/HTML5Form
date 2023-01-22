@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
-    <div class="myContainer p-5">
+    <div class="myContainer">
         <div class="card">
             <div class="card-header">
-                Payment from example
+                <h1>Payment from example</h1>
             </div>
             <div class="card-body">
                 <form class="row-g3">
@@ -68,89 +68,49 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
-                          <div id="radio-container" class="d-flex bg-dark text-white">
+                        <div class="col-3">
+                          <label for="form-check" class="form-label">We accept:</label>
+                          <div id="radio-container" class="d-flex bg-secondary text-white">
                             <div class="form-check">
                               <input class="form-check-input" type="radio" name="credit-cards" id="mastercard" value="mastercard" checked>
                               <label class="form-check-label" for="mastercard">
-                                <i class="fa-brands fa-cc-mastercard pe-4"></i>
+                                <i class="fa-brands fa-cc-mastercard pe-3"></i>
                               </label>
                             </div>
                             <div class="form-check">
                               <input class="form-check-input" type="radio" name="credit-cards" id="visa" value="visa">
                               <label class="form-check-label" for="visa">
-                                <i class="fa-brands fa-cc-visa pe-4"></i>
+                                <i class="fa-brands fa-cc-visa pe-3"></i>
                               </label>
                             </div>
                             <div class="form-check">
                               <input class="form-check-input" type="radio" name="credit-cards" id="diners" value="diners">
                               <label class="form-check-label" for="diners">
-                                <i class="fa-brands fa-cc-diners-club pe-4"></i>
+                                <i class="fa-brands fa-cc-diners-club pe-3"></i>
                               </label>
                             </div>
                             <div class="form-check">
                               <input class="form-check-input" type="radio" name="credit-cards" id="american" value="american">
                               <label class="form-check-label" for="american">
-                                <i class="fa-brands fa-cc-amex pe-4"></i>
+                                <i class="fa-brands fa-cc-amex pe-3"></i>
                               </label>
                             </div>
                           </div>
                         </div>
                         <div class="col-3">
-                          </select>
+                          
                         </div>
-                        <div class="col-3">
+                        <div class="col-6">
                             <label for="message" class="form-label">Message</label>
                             <textarea type="text" class="form-control" id="message"></textarea>
+                            <p class="notes">Add any notes here</p>
                         </div>
-                    </div>
-                    <hr>
-                    <div>
-                      <label for="inputEmail4" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4">
-                    </div>
-                    <div>
-                      <label for="inputPassword4" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="inputPassword4">
-                    </div>
-                    <div>
-                      <label for="inputAddress" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div>
-                      <label for="inputAddress2" class="form-label">Address 2</label>
-                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                    </div>
-                    <div>
-                      <label for="inputCity" class="form-label">City</label>
-                      <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div>
-                      <label for="inputState" class="form-label">State</label>
-                      <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label for="inputZip" class="form-label">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                          Check me out
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn btn-primary">Sign in</button>
                     </div>
                   </form>
             </div>
             <div class="card-footer text-muted">
-            2 days ago
+              <button class="btn btn-secondary">cancel</button>
+              <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
       </div>
     </div>
