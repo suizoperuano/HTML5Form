@@ -19,7 +19,7 @@
             <div class="card-body">
                 <form class="row-g3" id="myForm">
                     <div class="row px-3">
-                      <div class="alert alert-danger ps-3" id="altert-field" role="alert">
+                      <div class="alert alert-danger ps-3" id="alert-field" role="alert" style="display: none;">
                         Some fields are missing
                       </div>
                     </div>
@@ -114,42 +114,9 @@
             </div>
       </div>
     </div>
-      <script>
-        document.body.style.backgroundColor = "red";
-
-        let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
-
-            let select = document.getElementById("inputState");
-
-            for (let i = 0; i < states.length; i++) {
-                let option = document.createElement("option");
-                option.value = states[i];
-                option.text = states[i];
-                select.appendChild(option);
-            }
-        
-            function validate() {
-              let input_1 = document.getElementById("card-number").value;
-              let input_2 = document.getElementById("cvc-number").value;
-              let input_3 = document.getElementById("first-name").value;
-              let input_4 = document.getElementById("last-name").value;
-              let input_5 = document.getElementById("city").value;
-              let input_6 = document.getElementById("inputState").value;
-              let input_7 = document.getElementById("postal-code").value;
-              let input_8 = document.getElementById("mastercard").value;
-              let input_9 = document.getElementById("visa").value;
-              let input_10 = document.getElementById("diners").value;
-              let input_11 = document.getElementById("american").value;
-              if (input_1 == "" || input_2 == "" || input_3 == "" || input_4 == "" || input_5 == "" || input_6 == "" || input_6 == "pick a state"|| input_7 == "" || ( input_8 == "0" && input_9 == "0" && input_10 == "0" && input_11 == "0")) {
-                document.body.style.color = "red";
-              }
-                else {
-                document.body.style.color = "green";
-            } 
-          }
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="states.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
