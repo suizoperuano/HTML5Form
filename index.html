@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Ptracitse From</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e89fb71851.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script scr="/workspace/HTML5Form/states.js"></script>
   </head>
 <body>
     <div class="myContainer">
@@ -18,7 +17,7 @@
                 <h1>Payment from example</h1>
             </div>
             <div class="card-body">
-                <form class="row-g3">
+                <form class="row-g3" id="myForm">
                     <div class="row px-3">
                       <div class="alert alert-danger ps-3" id="altert-field" role="alert">
                         Some fields are missing
@@ -27,53 +26,51 @@
                     <div class="row">
                         <div class="col-5 ">
                             <label for="card-number" class="form-label">Card #</label>
-                            <input type="number" class="form-control" id="card-number" placeholder="XXXXXXXXXXXXXX">
+                            <input type="number" class="form-control" id="card-number" placeholder="XXXXXXXXXXXXXX" required>
                         </div>
                         <div class="col-3">
                             <label for="cvc-number" class="form-label">CVC #</label>
-                            <input type="number" class="form-control" id="cvc-number" placeholder="0000">
+                            <input type="number" class="form-control" id="cvc-number" placeholder="0000" required>
                         </div>
                         <div class="col-4">
                             <label for="amount" class="form-label">Amount</label>
                            <div class="d-flex">
-                                <p id="dollarsign">$</p><input type="number" class="form-control" id="amount" placeholder="Amount">
+                                <p id="dollarsign">$</p><input type="number" class="form-control" id="amount" placeholder="Amount" required>
                            </div> 
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <label for="first-name" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="first-name">
+                            <input type="text" class="form-control" id="first-name" required>
                         </div>
                         <div class="col-6">
                             <label for="last-name" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="last-name">
+                            <input type="text" class="form-control" id="last-name" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <label for="city" class="form-label">City</label>
-                            <input type="text" class="form-control" id="city">
+                            <input type="text" class="form-control" id="city" required>
                         </div>
                         <div class="col-3">
                           <label for="inputState" class="form-label">State</label>
-                          <select id="inputState" class="form-select" placeholder="Pick a state">
+                          <select id="inputState" class="form-select" placeholder="Pick a state" required>
                             <option selected>pick a state</option>
-                            <option>Forida</option>
-                            <option>California</option>
                           </select>
                         </div>
                         <div class="col-3">
                             <label for="postal-code" class="form-label">Postal Code</label>
-                            <input type="number" class="form-control" id="postal-code">
+                            <input type="number" class="form-control" id="postal-code" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-3">
                           <label for="form-check" class="form-label">We accept:</label>
                           <div id="radio-container" class="d-flex bg-secondary text-white">
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="credit-cards" id="mastercard" value="mastercard" checked>
+                            <div class="form-check" required>
+                              <input class="form-check-input" type="radio" name="credit-cards" id="mastercard" value="mastercard">
                               <label class="form-check-label" for="mastercard">
                                 <i class="fa-brands fa-cc-mastercard pe-3"></i>
                               </label>
@@ -112,11 +109,41 @@
             <div class="card-footer text-muted" id="footer">
               <div class="footer-buttons">
                 <button class="btn btn-secondary">cancel</button>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="btn btn-primary" onclick="validate()">Send</button>
               </div>
             </div>
       </div>
     </div>
+      <script>
+        document.body.style.backgroundColor = "red";
+
+        let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+
+            let select = document.getElementById("inputState");
+
+            for (let i = 0; i < states.length; i++) {
+                let option = document.createElement("option");
+                option.value = states[i];
+                option.text = states[i];
+                select.appendChild(option);
+            }
+        
+            function validate() {
+              let input_1 = document.getElementById("card-number").value;
+              let input_2 = document.getElementById("cvc-number").value;
+              let input_3 = document.getElementById("first-name").value;
+              let input_4 = document.getElementById("last-name").value;
+              let input_5 = document.getElementById("city").value;
+              let input_6 = document.getElementById("inputState").value;
+              let input_7 = document.getElementById("postal-code").value;
+              if (input_1 == "" || input_2 == "" || input_3 == "" || input_4 == "" || input_5 == "" || input_6 == "" || input_6 == "pick a state"|| input_7 == "") {
+                document.body.style.color = "red";
+              }
+                else {
+                document.body.style.color = "green";
+            } 
+          }
+      </script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
