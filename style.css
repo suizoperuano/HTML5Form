@@ -3,7 +3,7 @@
     font-weight: bold;
 }
 body {
-    background-color: aqua;
+    background-color: white;
 }
 .myContainer {
     width: 1000px;
@@ -20,4 +20,21 @@ body {
 .form-check {
     padding-top: 3px;
     padding-left: 25px;
+}
+.row {
+    margin-top: 8px;
+}
+.footer-buttons {
+    position: absolute;
+    right: 18px;
+}
+#footer {
+    height: 55px;
+}
+#alert-field {
+    padding: 0px, 20px, 0px, 20px;
+    font-weight: bold;
+}
+#message {
+    min-height: 80px;
 }
