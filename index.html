@@ -136,7 +136,11 @@
               let input_5 = document.getElementById("city").value;
               let input_6 = document.getElementById("inputState").value;
               let input_7 = document.getElementById("postal-code").value;
-              if (input_1 == "" || input_2 == "" || input_3 == "" || input_4 == "" || input_5 == "" || input_6 == "" || input_6 == "pick a state"|| input_7 == "") {
+              let input_8 = document.getElementById("mastercard").value;
+              let input_9 = document.getElementById("visa").value;
+              let input_10 = document.getElementById("diners").value;
+              let input_11 = document.getElementById("american").value;
+              if (input_1 == "" || input_2 == "" || input_3 == "" || input_4 == "" || input_5 == "" || input_6 == "" || input_6 == "pick a state"|| input_7 == "" || ( input_8 == "0" && input_9 == "0" && input_10 == "0" && input_11 == "0")) {
                 document.body.style.color = "red";
               }
                 else {
